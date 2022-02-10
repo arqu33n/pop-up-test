@@ -1,0 +1,205 @@
+@import url("../../font/stylesheet.css");
+p,
+h1 {
+  margin: 0;
+}
+* {
+  box-sizing: border-box;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  font-family: "Lab Grotesque";
+}
+.form__content {
+  display: flex;
+  flex-direction: column;
+}
+.form__title {
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 40px;
+}
+.form__description {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: #808080;
+  margin: 16px 0px 24px 0px;
+}
+.form__input-label {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  color: #000000;
+}
+.form__input-btn {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  color: #ea0029;
+  text-decoration: none;
+  margin: 0px 0px 16px 0px;
+  cursor: pointer;
+}
+.form__radio {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+.form__radio-title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  color: #000000;
+}
+
+.form__radio-input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.form__radio-label {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+}
+.form__radio-input + label {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  text-align: center;
+}
+.form__radio-input + label:before {
+  padding-top: 5px;
+  margin-left: 15px;
+  content: "Платёж";
+  display: inline-block;
+  vertical-align: middle;
+  width: 57px;
+  height: 36px;
+  background: #eef0f2;
+  border: none;
+  box-sizing: border-box;
+  border-radius: 50px;
+  font-family: "Lab Grotesque";
+  cursor: pointer;
+}
+.form__radio-input2 + label:before {
+  font-family: "Lab Grotesque";
+  content: "Срок";
+}
+.form__radio-input:checked + label::before {
+  background: linear-gradient(
+      255.35deg,
+      #dc3131 0.83%,
+      rgba(255, 79, 79, 0) 108.93%
+    ),
+    #ff5e56;
+  background-size: cover;
+  color: white;
+  width: 73px;
+  height: 36px;
+  transition: 0.2s;
+}
+.form__btn {
+  background: linear-gradient(
+      255.35deg,
+      #dc3131 0.83%,
+      rgba(255, 79, 79, 0) 108.93%
+    ),
+    #ff5e56;
+  box-shadow: 0px 0px 24px rgba(234, 0, 41, 0.33);
+  border: none;
+  border-radius: 6px;
+  width: 488px;
+  height: 56px;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  align-self: center;
+  margin-top: 40px;
+}
+.form__input {
+  border: 1px solid #dfe3e6;
+  border-radius: 3px;
+  height: 40px;
+  width: 100%;
+  padding: 8px 10px 8px;
+  font-family: "Lab Grotesque";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #000000;
+  margin: 16px 0px 8px;
+}
+.form__input::placeholder {
+  color: #bec5cc;
+  font-family: "Lab Grotesque";
+  font-size: 14px;
+  line-height: 24px;
+}
+.form__calculation {
+  display: flex;
+  flex-direction: column;
+}
+/* .form__calculation.active {
+  display: flex;
+  flex-direction: column;
+} */
+.form__calculation-checkbox {
+  border-bottom: 1px solid #dfe3e6;
+  padding: 16px 0px 16px 0px;
+}
+.form__calculation-result {
+  font-size: 14px;
+  line-height: 24px;
+  color: #000000;
+  font-weight: 500;
+  margin-left: 11px;
+  margin-right: 5px;
+}
+.form__calculation-desc {
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(0, 0, 0, 0.45);
+  font-weight: 500;
+}
+.calculation-checkbox_custom {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.calculation-checkbox_custom + label {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+.calculation-checkbox_custom + label::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #dfe3e6;
+  border-radius: 6px;
+  margin-right: 0.5em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+.calculation-checkbox_custom:checked + label::before {
+  border-color: #ff5e56;
+
+  background: no-repeat center
+      linear-gradient(255.35deg, #dc3131 0.83%, rgba(255, 79, 79, 0) 108.93%),
+    #ff5e56;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='14' height='11' viewBox='0 0 14 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M4.45455 8.70149L1.11364 5.25373L0 6.40299L4.45455 11L14 1.14925L12.8864 0L4.45455 8.70149Z' fill='white'/%3e%3c/svg%3e ");
+}
